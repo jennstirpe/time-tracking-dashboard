@@ -16,17 +16,49 @@ export const StyledTimeCard = styled.section`
             right: 1.25rem;
             top: -0.7rem;
         }
+    }
 
+    #work {
         #workIcon {
             display: block;
         }
-        
+    }
+
+    #play {
+        #playIcon {
+            display: block;
+        }
+    }
+
+    #study {
+        #studyIcon {
+            display: block;
+        }
+    }
+
+    #exercise {
+        #exerciseIcon {
+            display: block;
+        }
+    }
+
+    #social {
+        #socialIcon {
+            display: block;
+        }
+    }
+
+    #self {
+        #selfCareIcon {
+            display: block;
+        }
     }
 
     .time-card {
         background: ${({theme}) => theme.colors.cardBg};
         border-radius: 1rem;
         padding: 1.5rem 0;
+        transition: all 500ms ease-out;
 
         &:hover {
             cursor: pointer;

@@ -1,7 +1,7 @@
 import { StyledUser } from "./styled/User.styled"
 import userImg from "../images/image-jeremy.png"
 
-const User = () => {
+const User = ({ showDaily, showWeekly, showMonthly }) => {
   return (
     <StyledUser>
         <header>
@@ -9,11 +9,12 @@ const User = () => {
             <h1 id="user-name"><span>Report for</span> Jeremy Robson</h1>
         </header>
         <nav>
-            <button id="daily" class="view">Daily</button>
-            <button id="weekly" class="view active">Weekly</button>
-            <button id="monthly" class="view">Monthly</button>
+            <button onClick={showDaily} id="daily" className="view">Daily</button>
+            <button onClick={showWeekly} id="weekly" className="view active">Weekly</button>
+            <button onClick={showMonthly} id="monthly" className="view">Monthly</button>
         </nav>
     </StyledUser>
+    
   )
 }
 

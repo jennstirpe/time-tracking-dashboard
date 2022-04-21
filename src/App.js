@@ -1,6 +1,6 @@
-
-// import { buildQueries } from "@testing-library/dom";
+import { useState, useEffect } from 'react';
 import { ThemeProvider } from "styled-components";
+import TimeData from './data.json';
 
 import GlobalStyles from "./Components/styled/Global";
 import { StyledContainer } from "./Components/styled/Container.styled";
@@ -29,6 +29,51 @@ const theme = {
 
 
 function App() {
+  const [timeframe, setTimeframe] = useState("weekly");
+  const [prevText, setPrevText] = useState("Last Week");
+
+  useEffect(() => {
+    if (timeframe === "daily") {
+      setPrevText("Yesterday");
+    } else if (timeframe === "weekly") {
+      setPrevText("Last Week");
+    } else if (timeframe === "monthly") {
+      setPrevText("Last Month");
+    }
+  }, [timeframe]);
+
+  
+
+  function showDaily(e) {
+    const weeklyBtn = e.target.nextElementSibling;
+    const monthlyBtn = weeklyBtn.nextElementSibling;
+    e.target.classList.add("active")
+    weeklyBtn.classList.remove("active")
+    monthlyBtn.classList.remove("active")
+
+    setTimeframe("daily");
+  }
+
+  function showWeekly(e) {
+    const dailyBtn = e.target.previousElementSibling;
+    const monthlyBtn = e.target.nextElementSibling;
+    e.target.classList.add("active")
+    dailyBtn.classList.remove("active")
+    monthlyBtn.classList.remove("active")
+
+    setTimeframe("weekly");
+  }
+
+  function showMonthly(e) {
+    const weeklyBtn = e.target.previousElementSibling;
+    const dailyBtn = weeklyBtn.previousElementSibling;
+    e.target.classList.add("active")
+    dailyBtn.classList.remove("active")
+    weeklyBtn.classList.remove("active")
+
+    setTimeframe("monthly");
+  }
+
 
 
   return (
@@ -36,13 +81,13 @@ function App() {
       <>
       <GlobalStyles />
         <StyledContainer>
-          <User />
-          <TimeCard cardName="work" current="32" previous="36" color="hsl(15, 100%, 70%)" />
-          <TimeCard cardName="play" current="10" previous="8" color="hsl(195, 74%, 62%)" />
-          <TimeCard cardName="study" current="4" previous="7" color="hsl(348, 100%, 68%)" />
-          <TimeCard cardName="exercise" current="4" previous="5" color="hsl(145, 58%, 55%)" />
-          <TimeCard cardName="social" current="5" previous="10" color="hsl(264, 64%, 52%)" />
-          <TimeCard cardName="self care" current="2" previous="2" color="hsl(43, 84%, 65%)" />
+          <User showDaily={showDaily} showWeekly={showWeekly} showMonthly={showMonthly} />
+          <TimeCard id="work" time={TimeData[0]} timeframe={TimeData[0]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(15, 100%, 70%)" />
+          <TimeCard id="play" time={TimeData[1]} timeframe={TimeData[1]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(195, 74%, 62%)" />
+          <TimeCard id="study" time={TimeData[2]} timeframe={TimeData[2]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(348, 100%, 68%)" />
+          <TimeCard id="exercise" time={TimeData[3]} timeframe={TimeData[3]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(145, 58%, 55%)" />
+          <TimeCard id="social" time={TimeData[4]} timeframe={TimeData[4]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(264, 64%, 52%)" />
+          <TimeCard id="self" time={TimeData[5]} timeframe={TimeData[5]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(43, 84%, 65%)" />
         </StyledContainer>
       </>
     </ThemeProvider>

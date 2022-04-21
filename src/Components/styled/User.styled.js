@@ -35,9 +35,10 @@ export const StyledUser = styled.section`
 
     nav {
         height: 4.5rem;
+        margin: 0 1.5rem;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         .view {
             font-size: 1.2rem;
@@ -45,6 +46,8 @@ export const StyledUser = styled.section`
             background-color: ${({theme}) => theme.colors.cardBg};
             border: none;
             color: ${({theme}) => theme.colors.links};
+            transition: all 250ms linear;
+
 
             &:hover {
                 cursor: pointer;
