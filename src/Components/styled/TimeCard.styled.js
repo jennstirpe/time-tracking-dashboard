@@ -10,7 +10,7 @@ export const StyledTimeCard = styled.section`
         position: relative;
         overflow: hidden;
 
-        .icon {
+        .workIcon, .playIcon, .studyIcon, .exerciseIcon, .socialIcon, .selfCareIcon {
             display: none;
             position: absolute;
             right: 1.25rem;
@@ -19,37 +19,37 @@ export const StyledTimeCard = styled.section`
     }
 
     #work {
-        #workIcon {
+        .workIcon {
             display: block;
         }
     }
 
     #play {
-        #playIcon {
+        .playIcon {
             display: block;
         }
     }
 
     #study {
-        #studyIcon {
+        .studyIcon {
             display: block;
         }
     }
 
     #exercise {
-        #exerciseIcon {
+        .exerciseIcon {
             display: block;
         }
     }
 
     #social {
-        #socialIcon {
+        .socialIcon {
             display: block;
         }
     }
 
     #self {
-        #selfCareIcon {
+        .selfCareIcon {
             display: block;
         }
     }
