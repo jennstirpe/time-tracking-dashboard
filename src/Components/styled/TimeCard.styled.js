@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledTimeCard = styled.section`
     border-radius: 1rem;
-    background: ${(props) => props.color};
+    background: ${(props) => props.cardColor};
     margin-bottom: 1.5rem;
 
     .banner {

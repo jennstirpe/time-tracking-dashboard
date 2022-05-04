@@ -82,12 +82,12 @@ function App() {
       <GlobalStyles />
         <StyledContainer>
           <User showDaily={showDaily} showWeekly={showWeekly} showMonthly={showMonthly} />
-          <TimeCard id="work" time={TimeData[0]} timeframe={TimeData[0]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(15, 100%, 70%)" />
-          <TimeCard id="play" time={TimeData[1]} timeframe={TimeData[1]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(195, 74%, 62%)" />
-          <TimeCard id="study" time={TimeData[2]} timeframe={TimeData[2]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(348, 100%, 68%)" />
-          <TimeCard id="exercise" time={TimeData[3]} timeframe={TimeData[3]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(145, 58%, 55%)" />
-          <TimeCard id="social" time={TimeData[4]} timeframe={TimeData[4]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(264, 64%, 52%)" />
-          <TimeCard id="self" time={TimeData[5]} timeframe={TimeData[5]["timeframes"][`${timeframe}`]} prevText={prevText} color="hsl(43, 84%, 65%)" />
+          <TimeCard id="work" time={TimeData[0]} timeframe={TimeData[0]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(15, 100%, 70%)" />
+          <TimeCard id="play" time={TimeData[1]} timeframe={TimeData[1]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(195, 74%, 62%)" />
+          <TimeCard id="study" time={TimeData[2]} timeframe={TimeData[2]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(348, 100%, 68%)" />
+          <TimeCard id="exercise" time={TimeData[3]} timeframe={TimeData[3]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(145, 58%, 55%)" />
+          <TimeCard id="social" time={TimeData[4]} timeframe={TimeData[4]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(264, 64%, 52%)" />
+          <TimeCard id="self" time={TimeData[5]} timeframe={TimeData[5]["timeframes"][`${timeframe}`]} prevText={prevText} cardColor="hsl(43, 84%, 65%)" />
         </StyledContainer>
       </>
     </ThemeProvider>
