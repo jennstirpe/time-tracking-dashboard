@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/time-tracking-dashboard/static/js/main.9ec2c07e.js",
+    "main.js": "/time-tracking-dashboard/static/js/main.a9627d63.js",
     "static/js/787.a7e51cd8.chunk.js": "/time-tracking-dashboard/static/js/787.a7e51cd8.chunk.js",
     "static/media/image-jeremy.png": "/time-tracking-dashboard/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
     "index.html": "/time-tracking-dashboard/index.html",
-    "main.9ec2c07e.js.map": "/time-tracking-dashboard/static/js/main.9ec2c07e.js.map",
+    "main.a9627d63.js.map": "/time-tracking-dashboard/static/js/main.a9627d63.js.map",
     "787.a7e51cd8.chunk.js.map": "/time-tracking-dashboard/static/js/787.a7e51cd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9ec2c07e.js"
+    "static/js/main.a9627d63.js"
   ]
 }
