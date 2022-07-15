@@ -11,6 +11,7 @@ React.js
 ## Contact
 
 Jennifer S. - stirpe.jennifer@gmail.com
+
 [Project link](https://jennstirpe.github.io/time-tracking-dashboard/)
 
 ## Acknowledgements
